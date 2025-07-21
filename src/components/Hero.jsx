@@ -44,7 +44,7 @@ const Hero = () => {
           </p>
           <div className="hero-buttons" >
             <button
-              // onClick={() => scrollToSection('contact')}
+              onClick={() => scrollToSection('contact')}
               className="btn btn-primary"
             >
               <Mail size={20} />

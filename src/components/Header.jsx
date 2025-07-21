@@ -27,7 +27,6 @@ const Header = () => {
   }
 
   const navItems = [
-    { id: 'home', label: 'Home' },
     { id: 'about', label: 'About' },
     { id: 'skills', label: 'Skills' },
     { id: 'experience', label: 'Experience' },
@@ -46,6 +45,8 @@ const Header = () => {
         <motion.div
           whileHover={{ scale: 1.05 }}
           className="logo"
+          onClick={() => scrollToSection('home')}
+          style={{ cursor: 'pointer' }}
         >
           <h2>Bhuvanesh Kumar</h2>
         </motion.div>

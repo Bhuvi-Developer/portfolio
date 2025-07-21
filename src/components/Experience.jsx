@@ -1,17 +1,17 @@
 import AOS from 'aos'
 import 'aos/dist/aos.css'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { Calendar, MapPin, Building, Code, Database, Globe, GitBranch, Users } from 'lucide-react'
 import './Experience.css'
 
 const Experience = () => {
   useEffect(() => { AOS.init({ once: false, duration: 800 }) }, [])
-  const experiences = [
+  const experiences = [  
     {
       company: "Kairaa Tech Serve Pvt. Ltd.",
       position: "Full Stack Developer",
       duration: "DEC 2024 - PRESENT",
-      location: "Remote",
+      location: "Madurai",
       technologies: ["React Js", "Java", "Node Js"],
       achievements: [
         "Built and maintained 3+ full-stack web applications, including e-commerce platforms, business portals, and admin dashboards",
@@ -29,7 +29,7 @@ const Experience = () => {
       company: "ZASTA INFOTEK PRIVATE LIMITED",
       position: "Frontend Developer",
       duration: "Feb 2024 - Nov 2024",
-      location: "Remote",
+      location: "Chennai",
       technologies: ["Reactjs", "Java"],
       achievements: [
         "Proficient in building high-quality, responsive web interfaces for large-scale E-commerce and HRMS applications, with a focus on clean design and performance",
@@ -41,6 +41,8 @@ const Experience = () => {
     }
   ]
 
+  const [openAchievements, setOpenAchievements] = useState(Array(experiences.length).fill(false));
+
   return (
     <section id="experience" className="experience">
       <div className="container">
@@ -50,6 +52,7 @@ const Experience = () => {
         </div>
 
         <div className="experience-timeline">
+          <div className="timeline-line"></div>
           {experiences.map((exp, index) => (
             <div
               key={index}
@@ -57,48 +60,119 @@ const Experience = () => {
               data-aos={index % 2 === 0 ? 'fade-right' : 'fade-left'}
               data-aos-delay={index * 150}
             >
-              <div className="experience-card">
-                <div className="experience-header">
-                  <div className="company-info">
-                    <h3>{exp.position}</h3>
-                    <h4>{exp.company}</h4>
-                  </div>
-                  <div className="experience-meta">
-                    <div className="meta-item">
-                      <Calendar size={16} />
-                      <span>{exp.duration}</span>
+              {index % 2 === 0 ? (
+                <>
+                  <div className="experience-card left-card">
+                    <div className="experience-header">
+                      <div className="company-info">
+                        <h3>{exp.position}</h3>
+                        <span>{exp.duration}</span>
+                      </div>
+                      <div className="experience-meta">
+                        <h4>{exp.company}</h4>
+                        <div className="meta-item">
+                          <MapPin size={16} />
+                          <span>{exp.location}</span>
+                        </div>
+                      </div>
                     </div>
-                    <div className="meta-item">
-                      <MapPin size={16} />
-                      <span>{exp.location}</span>
+                    <div className="technologies">
+                      <h5>Technologies Used:</h5>
+                      <div className="tech-tags">
+                        {exp.technologies.map((tech, techIndex) => (
+                          <span key={techIndex} className="tech-tag">{tech}</span>
+                        ))}
+                      </div>
                     </div>
+                    <button
+                      className="achievements-toggle-btn"
+                      onClick={() => {
+                        setOpenAchievements(prev => {
+                          const updated = [...prev];
+                          updated[index] = !updated[index];
+                          return updated;
+                        });
+                      }}
+                    >
+                      {openAchievements[index] ? 'Hide achievements' : 'See more'}
+                    </button>
+                    {openAchievements[index] && (
+                      <div className="achievements">
+                        <h5>Key Achievements:</h5>
+                        <ul>
+                          {exp.achievements.map((achievement, achievementIndex) => (
+                            <li
+                              key={achievementIndex}
+                              data-aos="fade-up"
+                              data-aos-delay={(index * 150) + (achievementIndex * 50)}
+                            >
+                              {achievement}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
                   </div>
-                </div>
-
-                <div className="technologies">
-                  <h5>Technologies Used:</h5>
-                  <div className="tech-tags">
-                    {exp.technologies.map((tech, techIndex) => (
-                      <span key={techIndex} className="tech-tag">{tech}</span>
-                    ))}
+                  <div className="timeline-dot"></div>
+                  <div className="empty-side"></div>
+                </>
+              ) : (
+                <>
+                  <div className="empty-side"></div>
+                  <div className="timeline-dot"></div>
+                  <div className="experience-card right-card">
+                    <div className="experience-header">
+                      <div className="company-info">
+                        <h3>{exp.position}</h3>
+                        <span>{exp.duration}</span>
+                      </div>
+                      <div className="experience-meta">
+                        <h4>{exp.company}</h4>
+                        <div className="meta-item">
+                          <MapPin size={16} />
+                          <span>{exp.location}</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="technologies">
+                      <h5>Technologies Used:</h5>
+                      <div className="tech-tags">
+                        {exp.technologies.map((tech, techIndex) => (
+                          <span key={techIndex} className="tech-tag">{tech}</span>
+                        ))}
+                      </div>
+                    </div>
+                    <button
+                      className="achievements-toggle-btn"
+                      onClick={() => {
+                        setOpenAchievements(prev => {
+                          const updated = [...prev];
+                          updated[index] = !updated[index];
+                          return updated;
+                        });
+                      }}
+                    >
+                      {openAchievements[index] ? 'Hide achievements' : 'See more'}
+                    </button>
+                    {openAchievements[index] && (
+                      <div className="achievements">
+                        <h5>Key Achievements:</h5>
+                        <ul>
+                          {exp.achievements.map((achievement, achievementIndex) => (
+                            <li
+                              key={achievementIndex}
+                              data-aos="fade-up"
+                              data-aos-delay={(index * 150) + (achievementIndex * 50)}
+                            >
+                              {achievement}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
                   </div>
-                </div>
-
-                <div className="achievements">
-                  <h5>Key Achievements:</h5>
-                  <ul>
-                    {exp.achievements.map((achievement, achievementIndex) => (
-                      <li
-                        key={achievementIndex}
-                        data-aos="fade-up"
-                        data-aos-delay={(index * 150) + (achievementIndex * 50)}
-                      >
-                        {achievement}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
+                </>
+              )}
             </div>
           ))}
         </div>

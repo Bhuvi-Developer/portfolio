@@ -88,7 +88,7 @@ const Education = () => {
           ))}
         </div>
 
-        <div className="education-summary" data-aos="fade-up">
+        {/* <div className="education-summary" data-aos="fade-up">
           <div className="summary-content">
             <h3>Academic Excellence</h3>
             <div className="academic-highlights">
@@ -122,7 +122,7 @@ const Education = () => {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   )

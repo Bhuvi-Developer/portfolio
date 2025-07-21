@@ -20,7 +20,7 @@
 }
 
 .hero-content {
-  margin-top: 5.5rem;
+  margin-top: 4rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -177,7 +177,7 @@
 }
 @media (max-width: 700px) {
   .hero {
-    margin-top: 9rem;
+    margin-top: 4.5rem;
   }
   .hero-container {
     flex-direction: column-reverse;

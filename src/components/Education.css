@@ -133,5 +133,22 @@
 @media (max-width: 700px) {
   .education .container {
     padding: 0 10px;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
   }
-} 
+  .education-grid {
+    flex-direction: column;
+    gap: 24px;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+  .education-card {
+    padding: 16px;
+    margin-bottom: 16px;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+}
