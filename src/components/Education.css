@@ -1,0 +1,137 @@
+.education {
+  background: var(--color-bg);
+  color: var(--color-text);
+  padding: 80px 0;
+}
+.education .container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 60px;
+}
+.section-header h2 {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 800;
+  font-size: 36px;
+  color: var(--color-accent);
+  margin-bottom: 8px;
+}
+.section-header p {
+  font-family: 'IBM Plex Mono', monospace;
+  color: var(--color-muted);
+  font-size: 18px;
+  margin-bottom: 32px;
+}
+.education-grid {
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
+  margin-bottom: 48px;
+}
+.education-card {
+  background: var(--color-card);
+  border-radius: 8px;
+  padding: 24px 18px;
+  flex: 1;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+  transition: box-shadow 0.2s;
+}
+.education-card:hover {
+  box-shadow: 0 8px 32px rgba(63, 142, 0, 0.18);
+}
+.education-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+.education-icon {
+  color: var(--color-accent);
+  font-size: 22px;
+}
+.education-type {
+  font-family: 'IBM Plex Mono', monospace;
+  color: var(--color-accent-dark);
+  font-size: 15px;
+}
+.education-content h3 {
+  font-family: 'Raleway', sans-serif;
+  font-size: 20px;
+  color: var(--color-text);
+  margin: 0 0 4px 0;
+}
+.education-content h4 {
+  font-family: 'IBM Plex Mono', monospace;
+  color: var(--color-accent);
+  font-size: 16px;
+  margin: 0 0 8px 0;
+}
+.education-meta {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 8px;
+}
+.meta-item {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--color-muted);
+  font-size: 14px;
+}
+.education-highlight {
+  margin-top: 8px;
+}
+.highlight-badge {
+  background: var(--color-accent);
+  color: #fff;
+  border-radius: 4px;
+  padding: 4px 10px;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: 'IBM Plex Mono', monospace;
+}
+.education-summary {
+  margin-top: 32px;
+}
+.summary-content {
+  background: var(--color-card);
+  border-radius: 8px;
+  padding: 32px 16px;
+  color: var(--color-text);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+}
+.academic-highlights {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  margin-top: 18px;
+}
+.highlight-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--color-bg);
+  border-radius: 4px;
+  padding: 8px 14px;
+  color: var(--color-accent);
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 15px;
+}
+.highlight-icon {
+  font-size: 22px;
+}
+@media (max-width: 900px) {
+  .education .container {
+    padding: 0 20px;
+  }
+  .education-grid {
+    flex-direction: column;
+    gap: 24px;
+  }
+}
+@media (max-width: 700px) {
+  .education .container {
+    padding: 0 10px;
+  }
+} 
