@@ -48,7 +48,7 @@ const Header = () => {
           onClick={() => scrollToSection('home')}
           style={{ cursor: 'pointer' }}
         >
-          <h2>Bhuvanesh Kumar</h2>
+          <h2>BK</h2>
         </motion.div>
 
         <nav className={`nav ${isMobileMenuOpen ? 'mobile-open' : ''}`}>
