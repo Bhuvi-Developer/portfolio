@@ -177,7 +177,7 @@ const Experience = () => {
           ))}
         </div>
 
-        <div className="experience-summary" data-aos="fade-up">
+        {/* <div className="experience-summary" data-aos="fade-up">
           <div className="summary-stats">
             <div className="stat-item" data-aos="zoom-in" data-aos-delay="0">
               <div className="stat-icon">
@@ -216,7 +216,7 @@ const Experience = () => {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   )

@@ -126,6 +126,7 @@
   font-size: 1rem;
   color: var(--color-muted, #9C9C9C);
   letter-spacing: 0.5px;
+  white-space: nowrap;
 }
 
 .about-features {
@@ -206,6 +207,7 @@
   .stat-label {
     font-size: 0.875rem;
     text-align: center;
+    white-space: nowrap;
   }
   .features-grid {
     grid-template-columns: 1fr;

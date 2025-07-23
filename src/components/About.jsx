@@ -7,10 +7,10 @@ import './About.css'
 const About = () => {
   useEffect(() => { AOS.init({ once: false, duration: 800 }) }, [])
   const stats = [
-    { icon: <Code />, label: 'Projects', value: '3+' },
     { icon: <User />, label: 'Experience', value: '1.5+ Years' },
-    { icon: <Database />, label: 'Technologies', value: '8+' },
-    { icon: <Globe />, label: 'Applications', value: '5+' }
+    { icon: <Code />, label: 'Full Stack Projects', value: '5+' },
+    { icon: <Code />, label: 'Frontend', value: '' },
+    { icon: <Database />, label: 'Backend', value: '' }
   ]
 
   return (
@@ -38,26 +38,26 @@ const About = () => {
             
             <div className="about-highlights">
               <div className="highlight-item">
-                <span className="highlight-icon">🎯</span>
-                <span>Clean, maintainable code</span>
+                <span className="highlight-icon">🎨</span>
+                <span>Frontend Development</span>
+              </div>
+              <div className="highlight-item">
+                <span className="highlight-icon">🛠️</span>
+                <span>Backend API Development</span>
+              </div>
+              <div className="highlight-item">
+                <span className="highlight-icon">📂</span>
+                <span> Efficient Data Management</span>
               </div>
               <div className="highlight-item">
                 <span className="highlight-icon">🚀</span>
-                <span>User-friendly applications</span>
-              </div>
-              <div className="highlight-item">
-                <span className="highlight-icon">🔄</span>
-                <span>CI/CD with GitHub Actions</span>
-              </div>
-              <div className="highlight-item">
-                <span className="highlight-icon">👥</span>
-                <span>Team collaboration</span>
+                <span>Deployment & Delivery</span>
               </div>
             </div>
           </div>
 
           <div className="about-stats" data-aos="fade-left">
-            <h3>Quick Stats</h3>
+            <h3>Quick Starts</h3>
             <div className="stats-grid">
               {stats.map((stat, index) => (
                 <div key={index} className="stat-card" data-aos="zoom-in" data-aos-delay={index * 100}>
@@ -69,7 +69,7 @@ const About = () => {
             </div>
           </div>
         </div>
-
+{/* 
         <div className="about-features" data-aos="fade-up">
           <div className="features-grid">
             <div className="feature-card" data-aos="zoom-in" data-aos-delay="0">
@@ -93,7 +93,7 @@ const About = () => {
               <p>Analytical approach to debugging and implementing efficient solutions</p>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   )

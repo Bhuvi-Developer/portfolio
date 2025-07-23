@@ -3,7 +3,7 @@ import 'aos/dist/aos.css'
 import { useEffect } from 'react'
 import { Download, Mail, Linkedin, Github } from 'lucide-react'
 import profilePic from '../assets/bhuviPhoto.png'
-import resumePDF from '../assets/Bhuvaneshkumar N S_SDE.pdf'
+// import resumePDF from '../assets/Deedy_CV.pdf'
 import './Hero.css'
 import { Typewriter } from 'react-simple-typewriter';
 
@@ -52,8 +52,9 @@ const Hero = () => {
             </button>
             <a
               className="btn btn-secondary"
-              href={resumePDF}
-              download="Bhuvaneshkumar_N_S_Resume.pdf"
+              href="https://drive.google.com/file/d/10Ks0xcor4a_P3eBAp73hAXO_JPPAMRbO/view?usp=drive_link"
+              // href="https://drive.google.com/uc?export=download&id=10Ks0xcor4a_P3eBAp73hAXO_JPPAMRbO"
+              // download="Bhuvaneshkumar_N_S_Resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -61,6 +62,7 @@ const Hero = () => {
               Download CV
             </a>
           </div>
+        
           {/* <div className="hero-social" data-aos="fade-up" data-aos-delay="500">
             <a
               href="https://linkedin.com/in/bhuvanesh-kumar-n-s"

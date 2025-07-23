@@ -17,28 +17,28 @@ const Skills = () => {
     {
       title: "Frontend Development",
       skills: [
-        { name: "React.js", icon: <SiReact /> },
-        { name: "JavaScript", icon: <SiJavascript /> },
-        { name: "Material UI", icon: <SiMaterialdesign /> },
-        { name: "Bootstrap 5", icon: <SiBootstrap /> }
+        { name: "React.js", icon: <SiReact color="#61DAFB" /> },
+        { name: "JavaScript", icon: <SiJavascript color="#F7DF1E" /> },
+        { name: "Material UI", icon: <SiMaterialdesign color="#0081CB" /> },
+        { name: "Bootstrap 5", icon: <SiBootstrap color="#7952B3" /> }
       ]
     },
     {
       title: "Backend Development",
       skills: [
-        { name: "Java", icon: <FaJava /> },
-        { name: "Spring Boot", icon: <SiSpringboot /> },
-        { name: "Node.js", icon: <SiNodedotjs /> }
+        { name: "Java", icon: <FaJava color="#007396" /> },
+        { name: "Spring Boot", icon: <SiSpringboot color="#6DB33F" /> },
+        { name: "Node.js", icon: <SiNodedotjs color="#339933" /> }
       ]
     },
     {
       title: "Database & Tools",
       skills: [
-        { name: "MongoDB", icon: <SiMongodb /> },
-        { name: "MySQL", icon: <SiMysql /> },
-        { name: "Git & GitHub", icon: <SiGit /> },
-        { name: "Postman", icon: <SiPostman /> },
-        { name: "Swagger", icon: <SiSwagger /> }
+        { name: "MongoDB", icon: <SiMongodb color="#47A248" /> },
+        { name: "MySQL", icon: <SiMysql color="#4479A1" /> },
+        { name: "Git & GitHub", icon: <SiGit color="#F05032" /> },
+        { name: "Postman", icon: <SiPostman color="#FF6C37" /> },
+        { name: "Swagger", icon: <SiSwagger color="#85EA2D" /> }
       ]
     }
   ]
@@ -79,7 +79,7 @@ const Skills = () => {
           ))}
         </div>
 
-        <div className="skills-summary" data-aos="fade-up">
+        {/* <div className="skills-summary" data-aos="fade-up">
           <div className="summary-card">
             <h3>Development Approach</h3>
             <div className="approach-items">
@@ -113,7 +113,7 @@ const Skills = () => {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   )

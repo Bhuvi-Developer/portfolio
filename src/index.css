@@ -8,32 +8,32 @@
 }
 
 :root {
-  --color-bg: #ffffff;
-  --color-text: #1f2937;
-  --color-accent: #62BA1B;
-  --color-accent-dark: #3F8E00;
-  --color-bg-secondary: #f5f5f5;
-  --color-card: #f8f8f8;
-  --color-border: #e5e7eb;
-  --color-muted: #9C9C9C;
-  --color-header: #1B1B1B;
-  --color-btn-primary: #3F8E00;
-  --color-btn-secondary: #1B1B1B;
-  --color-btn-secondary-text: #fff;
+  --color-bg: #f9fafc;
+  --color-text: #22223b;
+  --color-accent: #4ea8de;
+  --color-accent-dark: #4361ee;
+  --color-bg-secondary: #e9f5ff;
+  --color-card: #f6faff;
+  --color-border: #b5d0ea;
+  --color-muted: #7b8fa1;
+  --color-header: #4361ee;
+  --color-btn-primary: #4ea8de;
+  --color-btn-secondary: #fffbe7;
+  --color-btn-secondary-text: #4361ee;
 }
 [data-theme="dark"] {
-  --color-bg: #080808;
-  --color-text: #fff;
-  --color-accent: #62BA1B;
-  --color-accent-dark: #3F8E00;
-  --color-bg-secondary: #1B1B1B;
-  --color-card: #1B1B1B;
-  --color-border: #3F8E00;
-  --color-muted: #9C9C9C;
-  --color-header: #1B1B1B;
-  --color-btn-primary: #3F8E00;
-  --color-btn-secondary: #1B1B1B;
-  --color-btn-secondary-text: #fff;
+  --color-bg: #181a2a;
+  --color-text: #f8fafd;
+  --color-accent: #4ea8de;
+  --color-accent-dark: #4361ee;
+  --color-bg-secondary: #3b5d69;
+  --color-card: #2a3f68ae;
+  --color-border: #4ea8de;
+  --color-muted: #b5d0ea;
+  --color-header: #4361ee;
+  --color-btn-primary: #4ea8de;
+  --color-btn-secondary: #23244d;
+  --color-btn-secondary-text: #f8fafd;
 }
 
 body {

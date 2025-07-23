@@ -9,6 +9,7 @@ import Education from './components/Education'
 import Contact from './components/Contact'
 import SocialLinks from './components/SocialLinks';
 import Loader from './components/Loader';
+import Projects from './components/Projects';
 
 
 function App() {
@@ -36,11 +37,12 @@ function App() {
       <Header />
       <main>
         <Hero />
-        <SocialLinks />
+        {/* <SocialLinks /> */}
         <About />
         <Skills />
         <Experience />
         <Education />
+        {/* <Projects /> */}
         <Contact />
       </main>
     </div>

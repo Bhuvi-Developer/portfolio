@@ -4,17 +4,33 @@ import { Menu, X, Sun, Moon } from 'lucide-react'
 import { useTheme } from '../context/ThemeContext'
 import './HeroHeader.css'
 
+const sectionIds = ['about', 'skills', 'experience', 'education', 'projects', 'contact']
+
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const { isDark, toggleTheme } = useTheme()
+  const [activeSection, setActiveSection] = useState('about')
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50)
+      let found = false
+      for (let i = sectionIds.length - 1; i >= 0; i--) {
+        const section = document.getElementById(sectionIds[i])
+        if (section) {
+          const rect = section.getBoundingClientRect()
+          if (rect.top <= 80) {
+            setActiveSection(sectionIds[i])
+            found = true
+            break
+          }
+        }
+      }
+      if (!found) setActiveSection(sectionIds[0])
     }
-
     window.addEventListener('scroll', handleScroll)
+    handleScroll()
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
@@ -31,6 +47,7 @@ const Header = () => {
     { id: 'skills', label: 'Skills' },
     { id: 'experience', label: 'Experience' },
     { id: 'education', label: 'Education' },
+    // { id: 'projects', label: 'Projects' },
     { id: 'contact', label: 'Contact' }
   ]
 
@@ -39,7 +56,7 @@ const Header = () => {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
-      className={`header ${isScrolled ? 'scrolled' : ''}`}
+      className={`header ${isScrolled ? 'scrolled' : ''} ${isDark ? 'dark' : 'light'}`}
     >
       <div className="header-container">
         <motion.div
@@ -61,7 +78,7 @@ const Header = () => {
               >
                 <button
                   onClick={() => scrollToSection(item.id)}
-                  className="nav-link"
+                  className={`nav-link${activeSection === item.id ? ' active' : ''}`}
                 >
                   {item.label}
                 </button>
