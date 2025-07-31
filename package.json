@@ -1,5 +1,5 @@
 {
-  "homepage" : "https://Bhuvi-developer.github.io/portfolio",
+  "homepage": "https://Bhuvi-developer.github.io/portfolio",
   "name": "portfolio",
   "private": true,
   "version": "0.0.0",
@@ -7,8 +7,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "predeploy":"npm run build",
-    "deploy":"gh-pages -d dist",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
     "lint": "eslint .",
     "preview": "vite preview"
   },
@@ -19,6 +19,7 @@
     "@mui/material": "^7.2.0",
     "aos": "^2.3.4",
     "framer-motion": "^12.23.3",
+    "gsap": "^3.13.0",
     "lucide-react": "^0.525.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
